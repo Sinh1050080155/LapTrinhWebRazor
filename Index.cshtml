@@ -1,0 +1,85 @@
+﻿
+@{
+    <style>
+        .title {
+            color: black;
+            font-size: 30px;
+            display: block;
+            font-weight: bolder;
+            padding: 10px 0 0 57px;
+            border-radius: 50px;
+        }
+        .BangLon {
+            margin: 36px auto 0px auto;
+            max-width: 600px;
+            padding: 0 0 20px 0;
+            /*background-color: rgb(142 140 140);*/
+            background-image: url(https://toigingiuvedep.vn/wp-content/uploads/2021/11/background-xam-dep-sang-tao-va-an-tuong-nhat.jpg);
+            display: block;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+            .BangLon:hover {
+                background-image: url(https://img4.thuthuatphanmem.vn/uploads/2020/12/17/background-gradient-tong-hop-background-to-mau-chuyen-sac-de_MfIAY_103943217.jpg);
+            }
+        .BangNho {
+            color: black;
+            font-size: 20px;
+            display: block;
+            display: flex;
+            min-width: 90px;
+            margin: 0 20px 3px 60px;
+        }
+        .TuKhoa {
+            min-width: 180px;
+        }
+        .luachon {
+            display: block;
+            justify-content: space-around;
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        @{Html.BeginForm("Action", "Controller");}
+        <div class="BangLon">
+            <div class="title">THÔNG TIN CHYẾN ĐI</div>
+            <div class="BangNho">
+                <div class="TuKhoa">Mã chuyến :</div>
+                @Html.TextBox(("MaChuyen"), null, new { style = "width: 300px" })
+            </div>
+            <div class="BangNho">
+                <div class="TuKhoa">Mã tuyến :</div>
+                @Html.TextBox(("MaTuyen"), null, new { style = "width: 300px" })
+            </div>
+            <div class="BangNho">
+                <div class="TuKhoa">Ngày khởi hành:</div>
+                <input type="date" value="SoNgay" style="width: 300px;" />
+            </div>
+            <div class="BangNho">
+                <div class="TuKhoa">Ngày kết thúc:</div>
+                <input type="date" value="SoNgay" style="width: 300px;" />
+            </div>
+            <div class="BangNho">
+                <div class="TuKhoa">Mã loại phòng :</div>
+                @Html.TextBox(("MaLoaiPhong"), null, new { style = "width: 300px" })
+            </div>
+            <div class="BangNho">
+                <div class="TuKhoa">Mã phương tiện :</div>
+                @Html.TextBox(("MaPhuongTien"), null, new { style = "width: 300px" })
+            </div>
+            <div class="BangNho">
+                <div class="TuKhoa">Tổng tiền :</div>
+                @Html.TextBox(("TongTien"), null, new { style = "width: 300px;" })
+            </div>
+            <div class="luachon">
+                <input type="submit" value="Đồng Ý" />
+                <input type="submit" value="Hủy" />
+            </div>
+        </div>
+        @{Html.EndForm();}
+    </body>
+}
+
+
+
